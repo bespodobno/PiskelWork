@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Keania+One|Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container-body">
+    <header class="header">
+      <h1>Piskel-clone</h1>
+    </header>
+    <div class="container-buttons">
+      <div class="container-pen-size">
+        <div class="pen-size-option" data-size="1">
+          <div class="pen-size"></div>
+        </div>
+        <div class="pen-size-option" data-size="2">
+          <div class="pen-size"></div>
+        </div>
+        <div class="pen-size-option" data-size="3">
+          <div class="pen-size"></div>
+        </div>
+        <div class="pen-size-option selected" data-size="4">
+          <div class="pen-size"></div>
+        </div>
+      </div>
+      <div id="container-tools">
+        <button class="button-item pen active" id="pen" tooltip="Pen"></button>
+        <button
+          class="button-item mirror-pen"
+          id="mirror-pen"
+          tooltip="Mirror-pen"
+        ></button>
+        <button
+          class="button-item paint-backet"
+          id="paint-bucket"
+          tooltip="Paint bucket"
+        ></button>
+        <button
+          class="button-item color-swap"
+          id="color-swap"
+          tooltip="Color swap"
+        ></button>
+        <button
+          class="button-item eraser"
+          id="eraser"
+          tooltip="Eraser"
+        ></button>
+        <button
+          class="button-item stroke"
+          id="stroke"
+          tooltip="Stroke tool"
+        ></button>
+        <button
+          class="button-item rectangle-tool"
+          id="rectangle-tool"
+          tooltip="Rectangle tool"
+        ></button>
+        <button
+          class="button-item circle-tool"
+          id="circle-tool"
+          tooltip="Circle tool"
+        ></button>
+        <button
+          class="button-item move-tool"
+          id="move-tool"
+          tooltip="Move tool"
+        ></button>
+        <button
+          class="button-item shape-section"
+          id="shape-section"
+          tooltip="Shape selection"
+        ></button>
+        <button
+          class="button-item shape-tool"
+          id="shape-tool"
+          tooltip="Shape tool"
+        ></button>
+        <button
+          class="button-item lasso-tool"
+          id="lasso-tool"
+          tooltip="Lasso"
+        ></button>
+        <button
+          class="button-item lighten-tool"
+          id="lighten-tool"
+          tooltip="Lighten"
+        ></button>
+        <button
+          class="button-item dithering-tool"
+          id="dithering-tool"
+          tooltip="Dithering"
+        ></button>
+        <button
+          class="button-item color-picker"
+          id="color-picker"
+          tooltip="Color-picker"
+        ></button>
+      </div>
+      <div class="container-color-input">
+        <button class="button-item color-input" id="color-input2"></button>
+        <button
+          class="button-item color-input active "
+          id="color-input1"
+        ></button>
+        <button class="swap-color" id="swap-color"></button>
+      </div>
+    </div>
+    <div class="container-frames">
+      <div class="frame-item active" id="0" draggable="true">
+        <canvas
+          class="canvas-frame"
+          width="96"
+          height="96"
+          id="canvas0"
+        ></canvas>
+        <button class="btn-delete hidden"></button>
+        <button class="btn-copy hidden"></button>
+        <button class="btn-move hidden"></button>
+      </div>
+      <div class="add-item">
+        <button class="btn-add-item" id="btn-add-item">Add new frame</button>
+      </div>
+    </div>
+    <div class="container-canvas-main">
+      <canvas
+        class="canvas-main"
+        width="500"
+        height="500"
+        id="canvas-main"
+      ></canvas>
+    </div>
+    <div class="container-preview">
+      <div class="container-preview-canvas">
+        <button class="btn-preview-size hidden" id="btn-preview-size"></button>
+        <button
+          class="btn-preview-popup hidden"
+          id="btn-preview-popup"
+        ></button>
+        <canvas
+          class="canvas-preview"
+          id="canvas-preview"
+          width="200"
+          height="200"
+        ></canvas>
+      </div>
+      <div class="continer-preview-fps">
+        <span id="spanFps">0</span>
+        <label for="fps">FPS</label>
+        <input type="range" id="fps" name="fps" min="0" max="24" value="0" />
+      </div>
+      <!-- <div class="container-layers">Layers</div> -->
+      <div class="container-transform" id="container-transform">
+        <h2>Transfrom</h2>
+        <div>
+          <button class="button-item flip-tool" id="flip-tool"></button>
+          <button class="button-item rotate-tool" id="rotate-tool"></button>
+          <button class="button-item clone-tool" id="clone-tool"></button>
+          <button class="button-item align-tool" id="align-tool"></button>
+        </div>
+      </div>
+      <div class="container-color">
+        <h2>Palettes</h2>
+        <div class="container-btn-palettes">
+          <button class="button-color"></button>
+          <button class="button-color"></button>
+          <button class="button-color"></button>
+          <button class="button-color"></button>
+        </div>
+      </div>
+    </div>
+    <div class="container-tools">
+      <button class="button-item export-tool"></button>
+      <button class="button-item import-tool"></button>
+    </div>
+    <script src="https://unpkg.com/vanilla-picker@2"></script>
+  </body>
+</html>
